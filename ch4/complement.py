@@ -1,4 +1,5 @@
 # coding:utf-8
+# データ補完のメソッドが書いてあるファイル
 
 from sklearn.impute import SimpleImputer
 import numpy as np

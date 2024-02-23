@@ -1,6 +1,7 @@
 # coding:utf-8
-import pandas as pd
+# 主な前処理が書いてあるファイル
 
+import pandas as pd
 from io import StringIO
 import pickle
 
