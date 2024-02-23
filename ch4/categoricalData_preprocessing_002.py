@@ -10,5 +10,13 @@ load_file_path = './sample_dataFrame_002.pkl'
 with open(load_file_path, mode='rb') as f:
     df = pickle.load(f)
 
+print(df)
+
 # クラスラベルと整数を対応させる辞書を生成
-# class_mapping = {lable: idx for idx, labl in enumerate(np.unique(df['size']))}
+class_mapping = {label: idx for idx,
+                 label in enumerate(np.unique(df['classlabel']))}
+print(class_mapping)
+
+# 作成したマッピング用の辞書を使用し、クラスラベルを整数に変換する
+df['classlabel'] = df['classlabel'].map(class_mapping)
+print(df)
