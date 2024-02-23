@@ -199,3 +199,4 @@ pip-selfcheck.json
 # End of https://www.toptal.com/developers/gitignore/api/venv,python,jupyternotebooks
 jupyterLabDocker/conf/root_jupyter/
 
+*.pkl

@@ -2,6 +2,7 @@
 import pandas as pd
 
 from io import StringIO
+import pickle
 
 csv_data = '''A,B,C,D
 1.0,2.0,3.0,4.0
@@ -9,6 +10,9 @@ csv_data = '''A,B,C,D
 10,11,12'''
 
 df = pd.read_csv(StringIO(csv_data))
+save_file_path = "sample_dataFrame.pkl"
+with open(file=save_file_path, mode='wb') as f:
+    pickle.dump(df, f)
 
 if __name__ == "__main__":
     print(df)
