@@ -3,6 +3,7 @@
 # 順序特徴量のエンコード
 
 import pandas as pd
+import pickle
 
 # サンプルデータの生成
 df = pd.DataFrame([
@@ -26,3 +27,7 @@ size_mapping = {'XL': 3, 'L': 2, 'M': 1}
 df['size'] = df['size'].map(size_mapping)
 
 print(df)
+
+save_file_path = 'sample_dataFrame_002.pkl'
+with open(save_file_path, mode='wb') as f:
+    pickle.dump(df, f)
