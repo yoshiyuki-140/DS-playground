@@ -19,3 +19,7 @@ imr = SimpleImputer(missing_values=np.nan, strategy='mean')
 
 # データに適合させる
 tmr = imr.fit(df.values)
+
+# 補完を実行
+imputed_data = imr.transform(df.values)
+print(imputed_data)
